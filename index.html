@@ -15,7 +15,8 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          // Path disesuaikan untuk Github Pages
+          navigator.serviceWorker.register('./sw.js')
             .then(reg => console.log('Service Worker PWA terdaftar!', reg))
             .catch(err => console.log('Pendaftaran Service Worker gagal', err));
         });
@@ -26,5 +27,6 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- INI BAGIAN PALING PENTING: Panggil file sumber React Anda -->
   </body>
 </html>

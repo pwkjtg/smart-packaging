@@ -7,14 +7,17 @@ const urlsToCache = [
   './manifest.json',
   './logo.svg',
   './logo-192.png',
-  './logo-512.png'
+  './logo-512.png',
+  // PERBAIKAN SANGAT PENTING: Wajib tambahkan JS & CSS React!
+  // Jika ini tidak ada, PWA akan blank putih saat offline.
+  '/smart-packaging/assets/index-BK8PbsM0.js',
+  '/smart-packaging/assets/index-DL_TCdeA.css'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        // Reload cache untuk memastikan file terbaru disimpan
         return cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })));
       })
   );
