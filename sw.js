@@ -10,8 +10,8 @@ const urlsToCache = [
   './logo-512.png',
   // PERBAIKAN SANGAT PENTING: Wajib tambahkan JS & CSS React!
   // Jika ini tidak ada, PWA akan blank putih saat offline.
-  '/smart-packaging/assets/index-BK8PbsM0.js',
-  '/smart-packaging/assets/index-DL_TCdeA.css'
+  '/smart-packaging/assets/index-FbXw2aqh.js',
+  '/smart-packaging/assets/index-DGxtoy_P.css'
 ];
 
 self.addEventListener('install', event => {
