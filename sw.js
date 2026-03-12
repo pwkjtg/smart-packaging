@@ -1,6 +1,6 @@
-const CACHE_NAME = 'pura-packaging-v2';
+const CACHE_NAME = 'pura-packaging-v3';
 
-// Daftar fail statik untuk akses offline
+// Daftar file statik untuk akses offline
 const urlsToCache = [
   './',
   './index.html',
@@ -14,7 +14,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        // Reload cache untuk memastikan fail terbaru disimpan
+        // Reload cache untuk memastikan file terbaru disimpan
         return cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })));
       })
   );
